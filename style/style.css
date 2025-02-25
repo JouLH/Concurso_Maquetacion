@@ -1,0 +1,156 @@
+#padre{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-areas: "nada main nada1";
+}
+#principal{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 17% 83%;
+    grid-template-areas: "lateral cabecera"
+                          "lateral titulo"
+                          "lateral pdf"
+                          "lateral actividades"
+                          "lateral cursos"
+                          "lateral conocerMas"
+                          "lateral pie";
+   
+}
+#lateral{
+    grid-area: lateral;
+    background-color: #550000;
+    display: flex;
+    flex-shrink: 6;
+}
+#cabecera{
+    grid-area: cabecera;
+    background-color: #550000;
+}
+#cabecera p{
+    color: white;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 8px; 
+}
+#titulo{
+    grid-area: titulo;
+    margin-left: 15px; 
+}
+#titulo h1{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#pdf{
+    grid-area: pdf;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-areas: "texto texto"
+                         "foot foot";
+    margin-left: 15px; 
+}
+   
+#text{
+    grid-area: texto;
+    display: flex;
+    gap: 10px 30px;
+}
+#text p{
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+#foot{
+    grid-area: foot;
+}
+#actividades{
+    grid-area: actividades;
+    margin-left: 15px; 
+}
+#actividades ul{
+    list-style-image: url('../img/usb.png');
+}
+#actividades li{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#cursos{
+    grid-area: cursos;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 15px; 
+}
+#cursos a{
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#conocerMas{
+    grid-area: conocerMas;
+    margin-left: 15px; 
+}
+#pie_pagina{
+    grid-area: pie;
+    background-color: #550000;
+}
+#pie_pagina p{
+    margin-left: 50px; 
+    color: white;
+}
+
+.Arial_15{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.imagen{
+    width: 160px;
+    height: 160px;
+    
+}
+.Arial_12{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.fotoUAM{
+    width: 120px;
+    height: 70px;
+    margin: 0 auto;
+}
+hr{
+    border-color:  #550000;
+}
+@media screen and (max-width: 1200px){
+    .fotoUAM{
+        width: 90px;
+        height: 40px;
+    }
+} 
+@media screen and (max-width: 600px) {
+
+    #padre{
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        grid-template-areas: "nada main nada1";
+    }
+    #principal{
+        grid-area: main;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas: "lateral cabecera"
+                              "lateral titulo"
+                              "lateral pdf"
+                              "lateral actividades"
+                              "lateral cursos"
+                              "lateral conocerMas"
+                              "lateral pie";
+       
+    }
+    #cursos{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fotoUAM{
+        width: 60px;
+        height: 35px;
+        margin: 0 auto;
+    }
+}
